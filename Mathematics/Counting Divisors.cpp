@@ -56,19 +56,19 @@ int main(){
     cin.tie(0);
 
     vector<int> d(1000005, 0);
-    for(int i=1;i<1000005;i++)
-    {
-        for(int j=i;j<1000005;j+=i)
-        {
+
+    FORL(i, 1, 1000005){
+        for(int j=i;j<1000005;j+=i){
             d[j]++;
         }
     }
-    ll n,x;
-    cin>>n;
-    for(int i=0;i<n;i++)
-    {
-        cin>>x;
-        cout<<d[x]<<"\n";
+
+    int n,x;
+    cin >> n;
+
+    while(n--){
+        cin >> x;
+        cout << d[x] << '\n';
     }
 
     return 0;
